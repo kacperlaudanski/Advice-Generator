@@ -4,6 +4,8 @@ const request = require("request");
 const https = require("https");
 
 const app = express();
+
+app.set('view engine', 'ejs');
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({
   extended: true
@@ -20,6 +22,8 @@ app.post("/", (req, res) => {
     response.on("data", (data)=>{
       const jsonData = JSON.parse(data);
       const advice = jsonData.slip.advice;
+      const number = Math.round(10000*Math.random());
+      res.render("advice", {pieceOfAdvice: advice, adviceNumber:number});
     });
   });
 });
