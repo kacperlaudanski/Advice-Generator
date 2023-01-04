@@ -57,3 +57,9 @@ body {
   box-shadow: 1px 5px 29px 6px rgba(81, 255, 168, 1);
   transition: 0.5s;
 }
+
+@media(max-width:650px){
+  #container{
+    width:90%;
+  }
+}
