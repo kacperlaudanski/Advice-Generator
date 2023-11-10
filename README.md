@@ -15,3 +15,7 @@ The application utilizes an external API to fetch diverse and inspirational advi
 
 - Click the "Generate Advice" button to get a random piece of advice or golden thought.
 - Enjoy inspirational thoughts and the option to share them with others.
+
+## Screenshoot
+<img width="1085" alt="Zrzut ekranu 2023-11-10 o 21 56 11" src="https://github.com/kacperlaudanski/Advice-Generator/assets/107647375/b6d145e6-6f6d-4f9b-b120-9231c8129ab5">
+
