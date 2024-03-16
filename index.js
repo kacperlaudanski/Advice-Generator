@@ -1,7 +1,6 @@
 const generateAdviceButton = document.getElementById('button') 
-const adviceContainer = document.querySelector('.advice')
-const adviceNumber = document.getElementById('random-number')
-const header = document.querySelector('.advice-number')
+const adviceContainer = document.querySelector('.advice-container__advice')
+const adviceNumber = document.getElementById('random-id')
 
 async function getAdvice(){
    const res = await fetch(`https://api.adviceslip.com/advice`)
@@ -11,9 +10,9 @@ async function getAdvice(){
     adviceContainer.textContent = advice.slip.advice
    }
    catch(error){
-     header.textContent = "ERROR"; 
+     adviceNumber.textContent = "ERROR"; 
      adviceContainer.textContent = "Something went wrong :( Please, try again later."
    }
 }
-getAdvice(); 
+window.addEventListener("DOMContentLoaded", getAdvice()); 
 generateAdviceButton.addEventListener('click', getAdvice); 
